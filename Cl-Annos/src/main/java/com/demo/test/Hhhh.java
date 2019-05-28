@@ -57,6 +57,17 @@ public class Hhhh {
 
 	}
 	
+	@Test
+	public void t(){
+	    double a = 2;
+	    double b = 1.8;
+	    double c =1.5;
+	    double x = a-b;
+	    double y = a-c ;
+	    System.out.println(x);
+	    System.out.println(y);
+	}
+	
 }
 
 class Po{
