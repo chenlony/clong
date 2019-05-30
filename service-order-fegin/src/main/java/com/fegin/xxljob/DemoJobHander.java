@@ -1,4 +1,4 @@
-package com.fegin.xxljob;
+/*package com.fegin.xxljob;
 
 import java.util.concurrent.TimeUnit;
 
@@ -24,4 +24,4 @@ public class DemoJobHander extends IJobHandler {
 		return SUCCESS;
 	}
 
-}
+}*/
