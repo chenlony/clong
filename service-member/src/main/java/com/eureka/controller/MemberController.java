@@ -16,12 +16,12 @@ import org.springframework.web.bind.annotation.RestController;
 import com.alibaba.fastjson.JSONObject;
 //import com.codingapi.tx.annotation.TxTransaction;
 import com.common.pojo.ResponseBase;
-import com.common.pojo.TbUser;
 import com.common.utils.Constants;
 import com.eureka.mapper.TbItemMapper;
 import com.eureka.mapper.TbUserMapper;
 import com.eureka.mq.RegisterMailboxProducer;
 import com.eureka.pojo.TbItem;
+import com.eureka.pojo.TbUser;
 
 
 
@@ -89,10 +89,10 @@ public class MemberController {
 //		int i = 1/0;
 		System.out.println(regi);
 		// 采用异步方式发送消息
-//				String email = user.getEmail();
-//				String json = emailJson(email);
-////				log.info("####会员服务推送消息到消息服务平台####json:{}", json);
-//				sendMsg(json);
+				String email = user.getEmail();
+				String json = emailJson(email);
+//				log.info("####会员服务推送消息到消息服务平台####json:{}", json);
+				sendMsg(json);
 		return "消息发送成功。";
 		
 	}
