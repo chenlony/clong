@@ -16,12 +16,12 @@ import org.springframework.web.bind.annotation.RestController;
 import com.alibaba.fastjson.JSONObject;
 //import com.codingapi.tx.annotation.TxTransaction;
 import com.common.pojo.ResponseBase;
-import com.common.pojo.TbUser;
 import com.common.utils.Constants;
 import com.eureka.mapper.TbItemMapper;
 import com.eureka.mapper.TbUserMapper;
 import com.eureka.mq.RegisterMailboxProducer;
 import com.eureka.pojo.TbItem;
+import com.eureka.pojo.TbUser;
 
 
 
