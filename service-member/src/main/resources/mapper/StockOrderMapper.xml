@@ -4,9 +4,9 @@
  <!-- <select id="selectAllByKey"  resultType="com.eureka.pojo.TbItem">
  select * from tb_item where id = #{itemId}
  </select> -->
- <insert id="insert"  parameterType="com.eureka.pojo.StockOrder">
+<!--  <insert id="insert"  parameterType="com.eureka.pojo.StockOrder">
  INSERT INTO stock_order (name,sid,create_time) VALUES(#{name},#{sid},#{createTime})
  
  </insert>
- 
+  -->
 </mapper>

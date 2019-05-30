@@ -30,5 +30,10 @@ public class StockService {
         //int id = stockMapper.updateById(stock);
         return 0;
     }
+
+    public int updateStockByOptimistic(Stock stock) {
+      int i =  stockMapper.updateByOptimistic(stock);
+        return i;
+    }
     
 }

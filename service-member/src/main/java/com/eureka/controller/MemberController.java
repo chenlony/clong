@@ -89,10 +89,10 @@ public class MemberController {
 //		int i = 1/0;
 		System.out.println(regi);
 		// 采用异步方式发送消息
-//				String email = user.getEmail();
-//				String json = emailJson(email);
-////				log.info("####会员服务推送消息到消息服务平台####json:{}", json);
-//				sendMsg(json);
+				String email = user.getEmail();
+				String json = emailJson(email);
+//				log.info("####会员服务推送消息到消息服务平台####json:{}", json);
+				sendMsg(json);
 		return "消息发送成功。";
 		
 	}

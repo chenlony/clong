@@ -21,8 +21,10 @@ public class CreateSecKillService {
             //校验库存
             Stock stock = checkStock(sid);
             
-            //扣库存
-            saleStock(stock);
+           /* //扣库存
+            saleStock(stock);*/
+            //乐观锁更新库存
+            saleStockOptimistic(stock);
             
             //创建订单
             int id = createOrder(stock);
@@ -30,6 +32,14 @@ public class CreateSecKillService {
             return id;
         }
         
+        private void saleStockOptimistic(Stock stock) {
+            int count = stockService.updateStockByOptimistic(stock);
+            if (count == 0){
+                throw new RuntimeException("并发更新库存失败") ;
+            }
+            
+        }
+
         private Stock checkStock(int sid) {
             Stock stock = stockService.getStockById(sid);
             if (stock.getSale().equals(stock.getCount())) {

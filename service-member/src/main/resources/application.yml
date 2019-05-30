@@ -30,7 +30,6 @@ spring:
 #        testOnReturn: false
 #        poolPreparedStatements: true
 #        maxOpenPreparedStatements: 20
-        
   mail:
     host: smtp.163.com
     username: cl13021030@163.com
