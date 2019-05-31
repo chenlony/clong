@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: service-mms
+  profiles:
+    active: dev
+          
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
