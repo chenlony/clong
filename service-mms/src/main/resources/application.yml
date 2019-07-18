@@ -4,5 +4,5 @@ spring:
   profiles:
     active: dev
           
-mybatis:
-  mapper-locations: classpath:mapper/*.xml
+#mybatis:
+#  mapper-locations: classpath:mapper/*.xml

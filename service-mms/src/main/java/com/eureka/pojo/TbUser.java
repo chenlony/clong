@@ -52,5 +52,10 @@ public class TbUser {
 	public void setUpdated(Date updated) {
 		this.updated = updated;
 	}
+	@Override
+	public String toString() {
+		return "TbUser [Id=" + Id + ", userName=" + userName + ", password=" + password + ", phone=" + phone
+				+ ", email=" + email + ", created=" + created + ", updated=" + updated + "]";
+	}
 	
 }
