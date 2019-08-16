@@ -5,48 +5,46 @@ eureka:
 server:
   port: 8762
 spring:
-  application:
-    name: service-member
-  datasource:
-    url: jdbc:mysql://192.168.10.221:3306/mms?serverTimezone=Asia/Shanghai
-    username: root
-    password: 123456
-    driver-class-name: com.mysql.jdbc.Driver
-#        name: test
-#        url: jdbc:mysql://192.168.10.221:3306/mms?serverTimezone=Asia/Shanghai
-#        username: root
-#        password: 123456
-#        driver-class-name: com.mysql.jdbc.Driver
-#        filters: stat
-#        maxActive: 20
-#        initialSize: 1
-#        maxWait: 60000
-#        minIdle: 1
-#        timeBetweenEvictionRunsMillis: 60000
-#        minEvictableIdleTimeMillis: 300000
-#        validationQuery: select 'x'
-#        testWhileIdle: true
-#        testOnBorrow: false
-#        testOnReturn: false
-#        poolPreparedStatements: true
-#        maxOpenPreparedStatements: 20
-  mail:
-    host: smtp.163.com
-    username: cl13021030@163.com
-    password: 11111
-    enable:  true
-    smtp:
-      auth: true
-    starttls:
-      enable: true
-      required: true
+    application:
+        name: service-member
+    datasource:
+        name: test
+        url: jdbc:mysql://192.168.14.129:3306/mms?useUnicode=true&characterEncoding=UTF-8
+        username: root
+        password: root
+        driver-class-name: com.mysql.jdbc.Driver
+        # 使用druid数据源
+        type: com.alibaba.druid.pool.DruidDataSource
+        filters: stat
+        maxActive: 20
+        initialSize: 1
+        maxWait: 60000
+        minIdle: 1
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: select 'x'
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        maxOpenPreparedStatements: 20
+    mail:
+      host: smtp.163.com
+      username: cl13021030@163.com
+      password: 11111
+      enable:  true
+      smtp:
+        auth: true
+      starttls:
+        enable: true
+        required: true
 ########################################        
     ##activemq连接信息
-  activemq:
-    broker-url: tcp://192.168.25.128:61616
-    in-memory: true
-    pool:
-      enabled: false
+    activemq:
+      broker-url: tcp://192.168.25.128:61616
+      in-memory: true
+      pool:
+        enabled: false
 ##队列      
 messages:
    queue: messages_queue
@@ -59,9 +57,9 @@ mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.eureka.pojo
 
-#pagehelper分页插件
-  pagehelper:
-    helperDialect: mysql
-    reasonable: true
-    supportMethodsArguments: true
-    params: count=countSql
+##pagehelper分页插件
+#  pagehelper:
+#    helperDialect: mysql
+#    reasonable: true
+#    supportMethodsArguments: true
+#    params: count=countSql
