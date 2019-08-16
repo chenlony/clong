@@ -34,7 +34,7 @@ jedis:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8888/eureka/
+      defaultZone: http://localhost:1001/eureka/
 server:
   port: 8762
 #rocketmq:

@@ -1,13 +1,14 @@
 package com.eureka.service;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.boot.devtools.remote.server.HandlerMapper;
 import org.springframework.stereotype.Service;
 
-
+import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.eureka.mapper.StockMapper;
 import com.eureka.pojo.Stock;
 
@@ -34,6 +35,15 @@ public class StockService {
     public int updateStockByOptimistic(Stock stock) {
       int i =  stockMapper.updateByOptimistic(stock);
         return i;
+    }
+    
+    public Stock getStockList(Integer id){
+        Stock selectById = stockMapper.selectById(id);
+        return selectById;
+    }
+
+    public List<Stock> getAllStockList() {
+        return stockMapper.selectList(new EntityWrapper<Stock>());
     }
     
 }

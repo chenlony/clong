@@ -1,7 +1,9 @@
 package com.eureka.pojo;
 
 import java.io.Serializable;
+import java.util.Date;
 
+import com.baomidou.mybatisplus.annotations.TableName;
 
 import lombok.Data;
 import lombok.Getter;
@@ -12,7 +14,7 @@ import lombok.ToString;
 @Setter
 @ToString
 @Data
-//@TableName("stock")
+@TableName("stock")
 public class Stock implements Serializable{
     /**
      * 
@@ -28,5 +30,7 @@ public class Stock implements Serializable{
     private Integer sale;
     
     private Integer version;
+    
+    private Date createTime;
  
 }
